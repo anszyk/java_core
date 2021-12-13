@@ -17,12 +17,9 @@ public class TelephoneDirectory {
 
         if (this.list.containsKey(surname)) {
             number = this.list.get(surname);
-            number.add(phoneNumber);
-            this.list.put(surname, number);
-        } else {
-            number.add(phoneNumber);
-            this.list.put(surname, number);
         }
+        number.add(phoneNumber);
+        this.list.put(surname, number);
     }
 
     public String get(String surname){
